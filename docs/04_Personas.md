@@ -38,14 +38,14 @@
 
 - **Mapa da Empatia - Enzo**
 
-| Quadrante         | Descrição |
-| :---------------- | :-------- |
-| **Vê**            |           |
-| **Ouve**          |           |
-| **Diz e faz**     |           |
-| **Pensa e sente** |           |
-| **Dores**         |           |
-| **Ganhos**        |           |
+| Quadrante         | Descrição                                                                                                                                                                                                                         |
+| :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Vê**            | Comunidades de jogos online trocando de interesse de forma extremamente rápida; seus criadores de conteúdo favorito não acompanham esse ritmo.                                                                                    |
+| **Ouve**          | Jogadores que competem pelos elos mais altos nas rankeds falarem de jogos novos que ele ainda não conhece.                                                                                                                        |
+| **Diz e faz**     | Faz postagens em plataformas genéricas e não consegue alcançar o público que deseja; expressa sua frustração sempre que uma tendência passa batido.                                                                               |
+| **Pensa e sente** | Se sente atrasado em relação aos seus amigos, sempre um passo atrás nas tendências dos jogos online.                                                                                                                              |
+| **Dores**         | Não conseguir visibilidade em suas postagens sobre lançamentos recentes; sensação de atraso sempre que inicia em um novo jogo online *depois* que seu sucesso chegou em suas redes sociais comuns.                                |
+| **Ganhos**        | Maior interação com jogadores que compartilham do seu estilo de jogo; ganho de visibilidade em uma plataforma com comunidades e usuários centrados em seus interesses; facilidade para acompanhar as tendências dos jogos online. |
 
 ## Persona **Secundária**
 
