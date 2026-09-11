@@ -23,7 +23,7 @@ Este projeto é desenvolvido pelos seguintes alunos:
 
 ### Descoberta
 
-- [Análise de Concorrência](#)
+- [Análise de Concorrência](docs/analise-concorrencia.md)
 - [Pesquisa e Coleta de Dados com Usuários](#)
 - [Perfil do Usuário](#)
 - [Personas](#)
