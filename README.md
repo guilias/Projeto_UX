@@ -24,9 +24,9 @@ Este projeto é desenvolvido pelos seguintes alunos:
 ### Descoberta
 
 - [Análise de Concorrência](docs/01_Concorrencia.md)
-- [Pesquisa e Coleta de Dados com Usuários](#)
-- [Perfil do Usuário](#)
-- [Personas](#)
+- [Pesquisa e Coleta de Dados com Usuários](docs/02_Pesquisa_Usuarios.md)
+- [Perfil do Usuário](docs/03_Perfil_Usuario.md)
+- [Personas](docs/04_Personas.md)
 - [Cenário de Análise/Problema](#)
 
 ### Definição
