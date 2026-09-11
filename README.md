@@ -23,7 +23,7 @@ Este projeto é desenvolvido pelos seguintes alunos:
 
 ### Descoberta
 
-- [Análise de Concorrência](docs/analise-concorrencia.md)
+- [Análise de Concorrência]([docs/analise-concorrencia.md](https://github.com/guilias/Projeto_UX/blob/main/docs/01_Concorrencia.md))
 - [Pesquisa e Coleta de Dados com Usuários](#)
 - [Perfil do Usuário](#)
 - [Personas](#)
