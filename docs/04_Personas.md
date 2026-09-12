@@ -4,6 +4,7 @@
 ## Personas **Primárias**
 
 ### Sofia, a **Garimpeira de Narrativas**
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e0a51438-6c37-41fd-8df5-08a92347cbd0" />
 
 | **Campo**                | **Descrição**                                                                                                                                                                                                                                                     |
 | :----------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,6 +27,7 @@
 | **Ganhos**        | Um ambiente digital onde poderá consultar reviews de jogos e recomendações, além de poder compartilhar suas resenhas e ganhar visibilidade em comunidades específicas.                                                           |
 
 ### Enzo, o **Tryhard**
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/cffa87ca-9423-4274-bfa6-216610e9cfd6" />
 
 | **Campo**                | **Descrição**                                                                                                                                                                                                                                                                                                                                    |
 | :----------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,27 +49,3 @@
 | **Dores**         | Não conseguir visibilidade em suas postagens sobre lançamentos recentes; sensação de atraso sempre que inicia em um novo jogo online *depois* que seu sucesso chegou em suas redes sociais comuns.                                |
 | **Ganhos**        | Maior interação com jogadores que compartilham do seu estilo de jogo; ganho de visibilidade em uma plataforma com comunidades e usuários centrados em seus interesses; facilidade para acompanhar as tendências dos jogos online. |
 
-## Persona **Secundária**
-
-### (WIP) Streamer
-
-
-| **Campo**                | **Descrição**            |
-| :----------------------- | :----------------------- |
-| **Idade**                | X anos                   |
-| **Ocupação**             | Streamer focado em jogos |
-| **Citação**              | *"..."*                  |
-| **Objetivos**            |                          |
-| **Nível de tecnologia**  |                          |
-| **Frustração principal** |                          |
-
-- **Mapa da Empatia - **
-
-| Quadrante         | Descrição |
-| :---------------- | :-------- |
-| **Vê**            |           |
-| **Ouve**          |           |
-| **Diz e faz**     |           |
-| **Pensa e sente** |           |
-| **Dores**         |           |
-| **Ganhos**        |           |
