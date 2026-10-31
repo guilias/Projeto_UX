@@ -38,7 +38,8 @@ Este projeto é desenvolvido pelos seguintes alunos:
 ### Prototipação
 
 - [Prototipação em Papel](docs/09_Prototipacao_Papel.md)
-- [Prototipação de Alta Fidelidade (FIGMA)](#)
+- [Prototipação de Média Fidelidade (FIGMA)](#)
+- [Prototipação de Alta Fidelidade (JS)](#)
 
 ### Avaliação
 
