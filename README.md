@@ -32,12 +32,12 @@ Este projeto é desenvolvido pelos seguintes alunos:
 ### Definição
 
 - [Análise de Tarefas](docs/06_Analise_Tarefas.md)
-- [Requisitos de UX e Metas de Usabilidade](docs/07_Requisitos_UX.md))
-- [Arquitetura de Informação e Fluxo do Usuário](08_Arquitetura_Fluxo.md))
+- [Requisitos de UX e Metas de Usabilidade](docs/07_Requisitos_UX.md)
+- [Arquitetura de Informação e Fluxo do Usuário](08_Arquitetura_Fluxo.md)
 
 ### Prototipação
 
-- [Prototipação em Papel](09_Prototipacao_Papel.md))
+- [Prototipação em Papel](09_Prototipacao_Papel.md)
 - [Prototipação de Alta Fidelidade (FIGMA)](#)
 
 ### Avaliação
