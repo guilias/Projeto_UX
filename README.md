@@ -27,17 +27,17 @@ Este projeto é desenvolvido pelos seguintes alunos:
 - [Pesquisa e Coleta de Dados com Usuários](docs/02_Pesquisa_Usuarios.md)
 - [Perfil do Usuário](docs/03_Perfil_Usuario.md)
 - [Personas](docs/04_Personas.md)
-- [Cenário de Análise/Problema](#)
+- [Cenário de Análise/Problema](docs/05_Cenarios.md)
 
 ### Definição
 
-- [Análise de Tarefas](#)
-- [Requisitos de UX e Metas de Usabilidade](#)
-- [Arquitetura de Informação e Fluxo do Usuário](#)
+- [Análise de Tarefas](docs/06_Analise_Tarefas.md)
+- [Requisitos de UX e Metas de Usabilidade](docs/07_Requisitos_UX.md))
+- [Arquitetura de Informação e Fluxo do Usuário](08_Arquitetura_Fluxo.md))
 
 ### Prototipação
 
-- [Prototipação em Papel](#)
+- [Prototipação em Papel](09_Prototipacao_Papel.md))
 - [Prototipação de Alta Fidelidade (FIGMA)](#)
 
 ### Avaliação
