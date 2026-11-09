@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkpoint — Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="icon"></span>
+      checkpoint
+    </a>
+
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" placeholder="Buscar jogos, usuários, tópicos...">
+    </div>
+
+    <div class="topbar-actions">
+      <button class="icon-btn" title="Notificações">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+      </button>
+      <a href="perfil.html" class="user-avatar-sm" title="Meu Perfil">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="nav-group">
+        <a href="index.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Início</span></a>
+<a href="explorar.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>Explorar</span></a>
+<a href="avaliacoes.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Avaliações</span></a>
+<a href="comunidade.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Comunidade</span></a>
+<a href="perfil.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Meu perfil</span></a>
+
+      </nav>
+
+      <div class="sidebar-divider"></div>
+
+      <div class="nav-group">
+        <span class="nav-section-title">Categorias</span>
+        <a href="explorar.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" y1="19" x2="19" y2="13"/><line x1="16" y1="16" x2="20" y2="20"/><line x1="19" y1="21" x2="21" y2="19"/></svg>
+          <span>Ação</span>
+        </a>
+        <a href="explorar.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <span>RPG</span>
+        </a>
+        <a href="explorar.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          <span>Aventura</span>
+        </a>
+        <a href="explorar.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 10h.01"/><path d="M15 10h.01"/><path d="M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z"/></svg>
+          <span>Terror</span>
+        </a>
+        <a href="explorar.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg>
+          <span>Estratégia</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="main-wrapper">
+      
+<div class="content-col">
+  <!-- Hero Banner -->
+  <section class="hero-banner" style="background-image: url('assets/elden_ring_big.png');">
+    <div class="hero-content">
+      <span class="hero-tag">Jogo em Destaque</span>
+      <h1 class="hero-title">Elden Ring</h1>
+      <div class="rating-badge">
+        <span class="star-gold">★</span> 4.7 <span style="color: var(--text-secondary); font-weight: 400;">(328k avaliações)</span>
+      </div>
+      <p class="hero-desc">Um vasto mundo aberto, repleto de mistérios, desafios épicos e uma história inesquecível nas Terras Intermédias.</p>
+      <a href="avaliacoes.html" class="btn-primary">Ver avaliações <span>›</span></a>
+    </div>
+  </section>
+
+  <!-- Novas Avaliações -->
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Novas avaliações</h2>
+      <a href="avaliacoes.html" class="link-more">Ver todas →</a>
+    </div>
+    <div class="reviews-grid-3">
+      <article class="review-card-vertical">
+        <img class="review-card-thumb" src="assets/rdr2_big.png" alt="Red Dead Redemption 2">
+        <div class="review-card-body">
+          <h3 class="review-game-title">Red Dead Redemption 2</h3>
+          <div class="user-meta">
+            <span class="avatar-circle">A</span>
+            <span><strong>arthur.silva</strong> · há 2 horas</span>
+          </div>
+          <div class="rating-badge"><span class="star-gold">★</span> 5.0</div>
+          <p class="review-excerpt">Simplesmente uma obra-prima. Atmosfera, os personagens e a história são incríveis. É um jogo que fica com você depois que termina.</p>
+          <div class="card-stats">
+            <span class="stat-item">💬 24</span>
+            <span class="stat-item">♡ 182</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card-vertical">
+        <img class="review-card-thumb" src="assets/hogwarts_big.png" alt="Hogwarts Legacy">
+        <div class="review-card-body">
+          <h3 class="review-game-title">Hogwarts Legacy</h3>
+          <div class="user-meta">
+            <span class="avatar-circle">L</span>
+            <span><strong>lunaferreira</strong> · há 5 horas</span>
+          </div>
+          <div class="rating-badge"><span class="star-gold">★</span> 4.5</div>
+          <p class="review-excerpt">O mundo é lindo e a jogabilidade é fluida. Sinto falta de mais profundidade nas missões secundárias, mas ainda assim vale muito a pena.</p>
+          <div class="card-stats">
+            <span class="stat-item">💬 37</span>
+            <span class="stat-item">♡ 156</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card-vertical">
+        <img class="review-card-thumb" src="assets/tlou_big.png" alt="The Last of Us Part I">
+        <div class="review-card-body">
+          <h3 class="review-game-title">The Last of Us Part I</h3>
+          <div class="user-meta">
+            <span class="avatar-circle">P</span>
+            <span><strong>pedrozz</strong> · há 8 horas</span>
+          </div>
+          <div class="rating-badge"><span class="star-gold">★</span> 4.8</div>
+          <p class="review-excerpt">Rejogando agora e continua sendo uma das experiências mais marcantes dos games. A história e os personagens são absurdos.</p>
+          <div class="card-stats">
+            <span class="stat-item">💬 12</span>
+            <span class="stat-item">♡ 98</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Discussões em Destaque -->
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Discussões em destaque</h2>
+      <a href="comunidade.html" class="link-more">Ver todas →</a>
+    </div>
+    <div class="discussion-list">
+      <div class="discussion-row">
+        <div class="discussion-left">
+          <div class="avatar-circle md">A</div>
+          <div class="discussion-info">
+            <h4>Qual foi o último jogo que te fez sentir algo?</h4>
+            <div class="user-meta">
+              <span class="tag-badge">Comunidade</span>
+              <span>142 respostas · há 3h</span>
+            </div>
+          </div>
+        </div>
+        <span class="reply-pill">142</span>
+      </div>
+
+      <div class="discussion-row">
+        <div class="discussion-left">
+          <div class="avatar-circle md">L</div>
+          <div class="discussion-info">
+            <h4>O que acharam do novo trailer de GTA VI?</h4>
+            <div class="user-meta">
+              <span class="tag-badge pink">Notícias</span>
+              <span>98 respostas · há 5h</span>
+            </div>
+          </div>
+        </div>
+        <span class="reply-pill">98</span>
+      </div>
+
+      <div class="discussion-row">
+        <div class="discussion-left">
+          <div class="avatar-circle md">P</div>
+          <div class="discussion-info">
+            <h4>Indies que todo mundo deveria jogar</h4>
+            <div class="user-meta">
+              <span class="tag-badge green">Indie</span>
+              <span>76 respostas · há 7h</span>
+            </div>
+          </div>
+        </div>
+        <span class="reply-pill">76</span>
+      </div>
+
+      <div class="discussion-row">
+        <div class="discussion-left">
+          <div class="avatar-circle md">M</div>
+          <div class="discussion-info">
+            <h4>Vale a pena jogar no PC ou no console?</h4>
+            <div class="user-meta">
+              <span class="tag-badge">Discussão</span>
+              <span>64 respostas · há 9h</span>
+            </div>
+          </div>
+        </div>
+        <span class="reply-pill">64</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- RIGHT SIDEBAR -->
+<aside class="right-panel">
+  <div class="widget-card">
+    <div class="section-header">
+      <h3 class="section-title" style="font-size: 1.05rem;">Jogos mais bem avaliados</h3>
+      <a href="explorar.html" class="link-more">Ver todos →</a>
+    </div>
+    <div class="ranked-list">
+      <div class="ranked-item">
+        <span class="rank-num">1</span>
+        <img class="rank-thumb" src="assets/elden_ring.png" alt="Elden Ring">
+        <div class="rank-info">
+          <div class="rank-title">Elden Ring</div>
+          <div class="rating-badge" style="font-size: 0.78rem;"><span class="star-gold">★</span> 4.7</div>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <span class="rank-num">2</span>
+        <img class="rank-thumb" src="assets/zelda_totk.png" alt="Zelda">
+        <div class="rank-info">
+          <div class="rank-title">The Legend of Zelda: Tears of the Kingdom</div>
+          <div class="rating-badge" style="font-size: 0.78rem;"><span class="star-gold">★</span> 4.6</div>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <span class="rank-num">3</span>
+        <img class="rank-thumb" src="assets/rdr2_icon.png" alt="RDR2">
+        <div class="rank-info">
+          <div class="rank-title">Red Dead Redemption 2</div>
+          <div class="rating-badge" style="font-size: 0.78rem;"><span class="star-gold">★</span> 4.6</div>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <span class="rank-num">4</span>
+        <img class="rank-thumb" src="assets/bg3.png" alt="BG3">
+        <div class="rank-info">
+          <div class="rank-title">Baldur's Gate 3</div>
+          <div class="rating-badge" style="font-size: 0.78rem;"><span class="star-gold">★</span> 4.5</div>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <span class="rank-num">5</span>
+        <img class="rank-thumb" src="assets/gow_ragnarok.png" alt="God of War">
+        <div class="rank-info">
+          <div class="rank-title">God of War Ragnarok</div>
+          <div class="rating-badge" style="font-size: 0.78rem;"><span class="star-gold">★</span> 4.4</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="widget-card">
+    <h3 class="section-title" style="font-size: 1.05rem; margin-bottom: 14px;">Atividade recente</h3>
+    <div class="ranked-list">
+      <div class="ranked-item">
+        <div class="avatar-circle md">J</div>
+        <div class="rank-info">
+          <p style="font-size: 0.8rem;"><strong>julia</strong> comentou na sua avaliação de <strong>The Last of Us Part I</strong></p>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">há 1h</span>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <div class="avatar-circle md">M</div>
+        <div class="rank-info">
+          <p style="font-size: 0.8rem;"><strong>mateus</strong> começou a seguir você</p>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">há 2h</span>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <div class="avatar-circle md">C</div>
+        <div class="rank-info">
+          <p style="font-size: 0.8rem;"><strong>caio</strong> postou uma nova discussão: "Qual é o melhor final boss da história?"</p>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">há 3h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="widget-card">
+    <h3 class="section-title" style="font-size: 1.05rem; margin-bottom: 14px;">Tópicos em alta</h3>
+    <div class="ranked-list">
+      <div class="ranked-item">
+        <span class="rank-num">1</span>
+        <div class="rank-info">
+          <div class="rank-title">Zelda: Ocarina of Time</div>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">12.4k posts</span>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <span class="rank-num">2</span>
+        <div class="rank-info">
+          <div class="rank-title">GTA VI</div>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">10.8k posts</span>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <span class="rank-num">3</span>
+        <div class="rank-info">
+          <div class="rank-title">Nintendo Switch 2</div>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">9.2k posts</span>
+        </div>
+      </div>
+      <div class="ranked-item">
+        <span class="rank-num">4</span>
+        <div class="rank-info">
+          <div class="rank-title">PS5</div>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">8.7k posts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    </main>
+  </div>
+
+</body>
+</html>
