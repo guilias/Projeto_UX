@@ -434,7 +434,7 @@ ul {
 .hero-banner::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -1px;
   background: linear-gradient(90deg, rgba(8, 10, 18, 0.95) 0%, rgba(8, 10, 18, 0.75) 45%, rgba(8, 10, 18, 0.2) 100%);
 }
 
@@ -695,7 +695,7 @@ ul {
 .explore-hero::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -1px;
   background: linear-gradient(180deg, rgba(8, 10, 18, 0.55) 0%, rgba(8, 10, 18, 0.92) 100%);
 }
 
