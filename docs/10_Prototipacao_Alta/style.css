@@ -1009,4 +1009,519 @@ ul {
     flex-direction: column;
     align-items: flex-start;
   }
+  /* ================= NOVAS TELAS E COMPONENTES ================= */
+
+/* Formulários e Inputs Modernos */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-input, 
+.form-textarea, 
+.form-select {
+  width: 100%;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 11px 16px;
+  color: var(--text-main);
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.form-input:focus, 
+.form-textarea:focus, 
+.form-select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background-color: #1f2742;
+  box-shadow: 0 0 0 3px rgba(190, 41, 98, 0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Blocos de Ações e Listas de Configuração */
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.settings-row:last-child {
+  border-bottom: none;
+}
+
+.settings-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.settings-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Cards de Suporte e Ajuda */
+.support-card {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: var(--transition);
+}
+
+.support-card:hover {
+  border-color: var(--border-highlight);
+  background-color: #1f2742;
+}
+
+.support-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.support-card p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+/* ================= GRID DE PÔSTERES E CARDS DAS CATEGORIAS ================= */
+
+.poster-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.poster-card {
+  background-color: var(--bg-card, #161b2e);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: var(--radius-md, 12px);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.poster-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-primary, #be2962);
+}
+
+.poster-img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background-color: #0b0f19;
+}
+
+.poster-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.poster-card:hover .poster-img-wrap img {
+  transform: scale(1.05);
+}
+
+.poster-meta {
+  padding: 12px;
+}
+
+.poster-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main, #ffffff);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+.poster-sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--text-secondary, #94a3b8);
+  font-weight: 500;
+}
+/* Correção e Reforço para a Grade e Cards */
+.poster-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.poster-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: #0b0f19;
+  overflow: hidden;
+}
+
+.poster-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-meta {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+/* Estilo específico para os cards de Comunidade nas Categorias */
+.poster-card[style*="flex-direction: row"] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: var(--bg-card, #161b2e);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: var(--radius-md, 12px);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.poster-card[style*="flex-direction: row"]:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary, #be2962);
+}
+/* Estilos da Tela de Rascunhos */
+.drafts-page-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.drafts-header {
+  background: var(--bg-card, #161b2e);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.drafts-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.drafts-icon-box {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-primary, #be2962);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(190, 41, 98, 0.4);
+}
+
+.drafts-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.btn-new-review {
+  background: var(--accent-primary, #be2962);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(190, 41, 98, 0.4);
+  transition: opacity 0.2s;
+}
+
+.drafts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.draft-card {
+  background-color: var(--bg-card, #161b2e);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.draft-thumb {
+  width: 70px;
+  height: 95px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #0b0f19;
+}
+
+.draft-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.draft-content {
+  flex: 1;
+}
+
+.draft-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.draft-game-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.draft-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.draft-stars {
+  color: var(--accent-gold, #f59e0b);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.draft-snippet {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 12px 0;
+  font-style: italic;
+}
+
+.draft-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-edit-draft {
+  background: var(--accent-primary, #be2962);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(190, 41, 98, 0.3);
+}
+
+.btn-delete-draft {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-delete-draft:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+/* Estilos da Tela de Rascunhos */
+.drafts-page-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.drafts-header {
+  background: var(--bg-card, #161b2e);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.drafts-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.drafts-icon-box {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-primary, #be2962);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(190, 41, 98, 0.4);
+}
+
+.drafts-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.drafts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.draft-card {
+  background-color: var(--bg-card, #161b2e);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.draft-thumb {
+  width: 70px;
+  height: 95px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #0b0f19;
+}
+
+.draft-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.draft-content {
+  flex: 1;
+}
+
+.draft-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.draft-game-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.draft-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.draft-stars {
+  color: var(--accent-gold, #f59e0b);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.draft-snippet {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 12px 0;
+  font-style: italic;
+}
+
+.draft-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-edit-draft {
+  background: var(--accent-primary, #be2962);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(190, 41, 98, 0.3);
+}
+
+.btn-delete-draft {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-delete-draft:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+}
 }
