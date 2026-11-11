@@ -7,18 +7,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- TOPBAR -->
   <header class="topbar">
-<a href="index.html" class="brand"><img src="assets/checkpoint_icon.png" alt="Logo" style="width: 24px; height: 24px; object-fit: contain;"> checkpoint</a>    <div class="search-bar">
+    <a href="index.html" class="brand">
+      <img src="assets/checkpoint_icon.png" alt="Logo" style="width: 24px; height: 24px; object-fit: contain;">
+      checkpoint
+    </a>
+
     <div class="search-bar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
       <input type="text" placeholder="Buscar jogos, usuários, tópicos...">
     </div>
+
     <div class="topbar-actions">
-      <a href="perfil.html" class="user-avatar-sm" title="Meu Perfil">👤</a>
+      <button class="icon-btn" title="Notificações">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+      </button>
+      <a href="perfil.html" class="user-avatar-sm" title="Meu Perfil">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </a>
     </div>
   </header>
 
   <div class="app-container">
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <nav class="nav-group">
         <a href="index.html" class="nav-item">
@@ -29,7 +50,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
           <span>Explorar</span>
         </a>
-        <a href="avaliacoes.html" class="nav-item active">
+        <a href="avaliacoes.html" class="nav-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           <span>Avaliações</span>
         </a>
@@ -53,50 +74,44 @@
         <a href="categoriaTerror.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 10h.01"/><path d="M15 10h.01"/><path d="M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z"/></svg><span>Terror</span></a>
         <a href="categoriaEstrategia.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg><span>Estratégia</span></a>
       </div>
-
-      <div class="sidebar-divider"></div>
-
-      <div class="nav-group">
-        <span class="nav-section-title">Sistema</span>
-        <a href="configuracoes.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span>Configurações</span></a>
-        <a href="suporte.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span>Suporte</span></a>
-      </div>
     </aside>
 
-    <main class="main-wrapper full-width">
-      <div class="drafts-page-container">
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-wrapper">
+      <div class="content-col" style="max-width: 100% !important; padding: 32px;">
         
-        <div class="drafts-header">
+        <!-- CABEÇALHO DA SEÇÃO -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px;">
           <div>
-            <div class="drafts-title-row">
-              <div class="drafts-icon-box">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
-              </div>
-              <h1 class="page-title" style="margin:0;">Meus Rascunhos</h1>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+              <span style="font-size: 1.4rem;">📌</span>
+              <h1 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin: 0;">Meus Rascunhos</h1>
             </div>
-            <p class="drafts-subtitle">Continue editando suas avaliações salvas anteriormente.</p>
+            <p style="color: var(--text-secondary, #94a3b8); font-size: 0.95rem; margin: 0;">Continue editando suas avaliações salvas anteriormente.</p>
           </div>
-          <a href="fazerAvaliacao.html" class="btn-new-review">+ Nova Avaliação</a>
+          
+          <a href="fazerAvaliacao.html" style="background: var(--accent-primary, #be2962); color: #fff; padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(190, 41, 98, 0.3);">
+            + Nova Avaliação
+          </a>
         </div>
 
-        <div class="drafts-list">
-          <div class="draft-card">
-            <div class="draft-thumb">
-              <img src="assets/tlou.png" alt="Capa" onerror="this.src='https://via.placeholder.com/70x95/161b2e/ffffff?text=JOGO'">
+        <!-- GRELHA DE RASCUNHOS -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px;">
+          
+          <!-- CARD DE RASCUNHO -->
+          <div style="background: var(--bg-card, #161b2e); border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08)); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 260px; background: #0b0f19; position: relative;">
+              <img src="assets/tlou.png" style="width: 100%; height: 100%; object-fit: cover;" alt="The Last of Us Part I">
+              <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">Rascunho</span>
             </div>
-            <div class="draft-content">
-              <div class="draft-meta-top">
-                <h3 class="draft-game-name">The Last of Us Part I</h3>
-                <span class="draft-date">Salvo há 2 dias</span>
-              </div>
-              <div class="draft-stars">★★★★☆</div>
-              <p class="draft-snippet">"Uma obra-prima emocionante que redefine o conceito de narrativa nos games..."</p>
-              <div class="draft-actions">
-                <a href="fazerAvaliacao.html" class="btn-edit-draft">Continuar Editando</a>
-                <button type="button" class="btn-delete-draft" onclick="this.closest('.draft-card').remove()">Excluir</button>
-              </div>
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+              <h3 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">The Last of Us Part I</h3>
+              <a href="fazerAvaliacao.html" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; text-align: center; padding: 8px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none;">
+                Continuar Editando
+              </a>
             </div>
           </div>
+
         </div>
 
       </div>
