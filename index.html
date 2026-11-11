@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkpoint: descubra, avalie e organize seus jogos.">
+  <title>Checkpoint</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-button" id="menu-button" aria-label="Abrir menu"><span class="material-symbols-rounded" aria-hidden="true">menu</span></button>
+    <a class="brand" href="index.html">
+      <img src="assets/checkpoint_icon.png" alt="">
+      <span>checkpoint</span>
+    </a>
+    <label class="search">
+      <span aria-hidden="true"><span class="material-symbols-rounded" aria-hidden="true">search</span></span>
+      <input type="search" placeholder="Buscar jogos, usuários, tópicos..." aria-label="Buscar">
+    </label>
+    <div class="topbar-actions">
+      <button class="icon-button" aria-label="Notificações"><span class="material-symbols-rounded" aria-hidden="true">notifications</span></button>
+      <a class="avatar" href="pages/perfil.html" aria-label="Abrir perfil">A</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar"><div class="sidebar-user"><div class="avatar">A</div><div><strong>Arthur Silva</strong><small>@arthur.silva</small></div></div><nav class="side-nav"><a href="index.html" class="active"><span class="material-symbols-rounded" aria-hidden="true">home</span> <span>Início</span></a><a href="pages/explorar.html"><span class="material-symbols-rounded" aria-hidden="true">explore</span> <span>Explorar</span></a><a href="pages/avaliacoes.html"><span class="material-symbols-rounded" aria-hidden="true">star</span> <span>Avaliações</span></a><a href="pages/comunidade.html"><span class="material-symbols-rounded" aria-hidden="true">notifications</span> <span>Comunidade</span></a><a href="pages/perfil.html"><span class="material-symbols-rounded" aria-hidden="true">person</span> <span>Meu perfil</span></a></nav><hr><p class="nav-title">Categorias</p><nav class="side-nav"><a href="pages/categories/categoria-acao.html"><span class="material-symbols-rounded" aria-hidden="true">swords</span> <span>Ação</span></a><a href="pages/categories/categoria-rpg.html"><span class="material-symbols-rounded" aria-hidden="true">auto_awesome</span> <span>RPG</span></a><a href="pages/categories/categoria-aventura.html"><span class="material-symbols-rounded" aria-hidden="true">explore</span> <span>Aventura</span></a><a href="pages/categories/categoria-terror.html"><span class="material-symbols-rounded" aria-hidden="true">skull</span> <span>Terror</span></a><a href="pages/categories/categoria-estrategia.html"><span class="material-symbols-rounded" aria-hidden="true">strategy</span> <span>Estratégia</span></a></nav><hr><p class="nav-title">Sistema</p><nav class="side-nav"><a href="pages/configuracoes.html"><span class="material-symbols-rounded" aria-hidden="true">settings</span> <span>Configurações</span></a><a href="pages/suporte.html"><span class="material-symbols-rounded" aria-hidden="true">help</span> <span>Suporte</span></a><a href="pages/sair.html" class="danger"><span class="material-symbols-rounded" aria-hidden="true">logout</span> <span>Sair</span></a></nav></aside>
+
+    <main class="content">
+      <section class="page active" id="home">
+        <div class="hero">
+          <img src="assets/elden_ring_big.png" alt="Elden Ring">
+          <div class="hero-content">
+            <span class="eyebrow">JOGO EM DESTAQUE</span>
+            <h1>Elden Ring</h1>
+            <p class="rating"><span class="material-symbols-rounded rating-icon" aria-hidden="true">star</span> 4.7 <span>(328k avaliações)</span></p>
+            <p>Um vasto mundo aberto, repleto de mistérios, desafios épicos e uma história inesquecível.</p>
+            <a class="primary" href="pages/avaliacoes.html">Ver avaliações <span><span class="material-symbols-rounded arrow-icon" aria-hidden="true">arrow_forward</span></span></a>
+          </div>
+        </div>
+
+        <section>
+          <div class="section-heading"><h2>Novas avaliações</h2><a class="text-button" href="pages/avaliacoes.html">Ver todas <span class="material-symbols-rounded arrow-icon" aria-hidden="true">arrow_forward</span></a></div>
+          <div class="cards three">
+            <article class="review-card"><img src="assets/rdr2_big.png" alt="Red Dead Redemption 2"><div><h3>Red Dead Redemption 2</h3><p class="muted">arthur.silva · há 2 horas</p><p class="rating"><span class="material-symbols-rounded rating-icon" aria-hidden="true">star</span> 5.0</p><p>Simplesmente uma obra-prima. Atmosfera, personagens e história incríveis.</p><footer><span class="material-symbols-rounded action-icon" aria-hidden="true">favorite</span> 182 &nbsp; · &nbsp; <span class="material-symbols-rounded action-icon" aria-hidden="true">comment</span> 24</footer></div></article>
+            <article class="review-card"><img src="assets/hogwarts_big.png" alt="Hogwarts Legacy"><div><h3>Hogwarts Legacy</h3><p class="muted">luna.mendes · há 5 horas</p><p class="rating"><span class="material-symbols-rounded rating-icon" aria-hidden="true">star</span> 4.5</p><p>Uma experiência divertida para quem sempre sonhou em explorar Hogwarts.</p><footer><span class="material-symbols-rounded action-icon" aria-hidden="true">favorite</span> 96 &nbsp; · &nbsp; <span class="material-symbols-rounded action-icon" aria-hidden="true">comment</span> 12</footer></div></article>
+            <article class="review-card"><img src="assets/tlou_big.png" alt="The Last of Us"><div><h3>The Last of Us</h3><p class="muted">joao.games · ontem</p><p class="rating"><span class="material-symbols-rounded rating-icon" aria-hidden="true">star</span> 4.8</p><p>Uma narrativa marcante e personagens que continuam na memória.</p><footer><span class="material-symbols-rounded action-icon" aria-hidden="true">favorite</span> 143 &nbsp; · &nbsp; <span class="material-symbols-rounded action-icon" aria-hidden="true">comment</span> 31</footer></div></article>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading"><h2>Discussões em destaque</h2><a class="text-button" href="pages/comunidade.html">Ver todas <span class="material-symbols-rounded arrow-icon" aria-hidden="true">arrow_forward</span></a></div>
+          <div class="discussion-list">
+            <article><span class="tag">Discussão</span><h3>Qual foi o último jogo que te fez sentir algo?</h3><p class="muted">Arthur Silva · há 3h</p><strong>142</strong></article>
+            <article><span class="tag">Notícias</span><h3>O que acharam do novo trailer de GTA VI?</h3><p class="muted">Julia Costa · há 5h</p><strong>98</strong></article>
+          </div>
+        </section>
+      </section>
+
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegação mobile">
+    <a class="active" href="index.html"><span class="material-symbols-rounded" aria-hidden="true">home</span><span>Início</span></a><a href="pages/explorar.html"><span class="material-symbols-rounded" aria-hidden="true">explore</span><span>Explorar</span></a><a href="pages/avaliacoes.html"><span class="material-symbols-rounded rating-icon" aria-hidden="true">star</span><span>Avaliações</span></a><a href="pages/comunidade.html"><span class="material-symbols-rounded" aria-hidden="true">notifications</span><span>Comunidade</span></a><a href="pages/perfil.html"><span class="material-symbols-rounded" aria-hidden="true">person</span><span>Perfil</span></a>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
