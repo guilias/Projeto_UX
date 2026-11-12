@@ -1,7 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import Icon from "./Icon";
 
-// Rotas que, no hi-fi, mantêm outro item do menu destacado.
 const aliases = {
   "/avaliacoes": ["/fazer-avaliacao", "/rascunhos"],
   "/perfil": ["/editar-perfil"],

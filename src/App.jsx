@@ -2,6 +2,12 @@ import { useState } from "react";
 import { Link, Route, Routes, useNavigate, useParams } from "react-router-dom";
 import Layout from "./components/Layout";
 import Icon from "./components/Icon";
+import { ToastProvider, useToast } from "./components/Toast";
+import {
+  WishlistButton,
+  WishlistProvider,
+  WishlistSection,
+} from "./components/Wishlist";
 
 const reviews = [
   [
@@ -363,6 +369,7 @@ function Explore() {
             <article className="poster-card" key={title}>
               <div className="poster-img-wrap">
                 <img src={`/assets/${image}`} alt={`Capa de ${title}`} />
+                <WishlistButton game={title} image={image} />
               </div>
               <div className="poster-meta">
                 <div className="poster-title">{title}</div>
@@ -443,7 +450,6 @@ function Explore() {
             {[
               ["Ação & Aventura", "acao", "swords"],
               ["RPG", "rpg", "layers"],
-              // Sobrevivência e Indies não têm página de categoria.
               ["Sobrevivência", "", "near_me"],
               ["Terror", "terror", "skull"],
               ["Indies", "", "videogame_asset"],
@@ -667,7 +673,6 @@ function Reviews() {
 }
 
 function Community() {
-  // [título, usuário, inicial, tag, cor da tag, 2ª tag, cor da 2ª tag, respostas, quando]
   const discussions = [
     [
       "Qual foi o último jogo que te fez sentir algo?",
@@ -909,6 +914,7 @@ function Profile() {
             <article className="poster-card" key={title}>
               <div className="poster-img-wrap">
                 <img src={`/assets/${image}`} alt={title} />
+                <WishlistButton game={title} image={image} />
               </div>
               <div className="poster-meta">
                 <div className="star-row">
@@ -923,6 +929,7 @@ function Profile() {
           ))}
         </div>
       </section>
+      <WishlistSection />
       <section className="profile-bottom">
         <div>
           <div className="section-header">
@@ -1116,6 +1123,7 @@ function Category() {
             <article className="poster-card" key={name}>
               <div className="poster-img-wrap">
                 <img src={`/assets/${image}`} alt={name} />
+                <WishlistButton game={name} image={image} />
               </div>
               <div className="poster-meta">
                 <div className="poster-title">{name}</div>
@@ -1273,10 +1281,11 @@ function SimpleRoute({ title }) {
 
 function EditProfile() {
   const navigate = useNavigate();
+  const { showToast } = useToast();
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Alterações salvas com sucesso!");
     navigate("/perfil", { replace: true });
+    showToast("Alterações salvas com sucesso!");
   };
   return (
     <PrototypePage title="" description="">
@@ -1349,11 +1358,13 @@ function EditProfile() {
 function WriteReview() {
   const [rating, setRating] = useState(4);
   const [recommended, setRecommended] = useState(true);
+  const [spoiler, setSpoiler] = useState(false);
   const navigate = useNavigate();
+  const { showToast } = useToast();
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Avaliação publicada com sucesso!");
     navigate("/avaliacoes", { replace: true });
+    showToast("Avaliação publicada com sucesso!");
   };
   return (
     <PrototypePage title="" description="">
@@ -1449,8 +1460,24 @@ function WriteReview() {
               </div>
               <label className="spoiler-option" htmlFor="spoiler">
                 <span>Contém spoiler?</span>
-                <input id="spoiler" type="checkbox" />
+                <input
+                  id="spoiler"
+                  type="checkbox"
+                  checked={spoiler}
+                  onChange={(event) => setSpoiler(event.target.checked)}
+                />
               </label>
+              {spoiler && (
+                <p className="spoiler-warning" role="status">
+                  <Icon>visibility_off</Icon>
+                  <span>
+                    <span className="spoiler-warning-label">
+                      Spoiler sinalizado
+                    </span>
+                    Leitores precisarão revelar o texto para ler esta avaliação.
+                  </span>
+                </p>
+              )}
               <label htmlFor="play-status">
                 Status da jogatina
                 <select id="play-status" defaultValue="finalizado">
@@ -1499,36 +1526,40 @@ function WriteReview() {
 
 export default function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/explorar" element={<Explore />} />
-        <Route path="/avaliacoes" element={<Reviews />} />
-        <Route path="/comunidade" element={<Community />} />
-        <Route path="/perfil" element={<Profile />} />
-        <Route path="/categorias/:category" element={<Category />} />
-        <Route
-          path="/configuracoes"
-          element={
-            <SimpleRoute
-              title="Configurações"
-              description="Ajuste suas preferências."
+    <ToastProvider>
+      <WishlistProvider>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/explorar" element={<Explore />} />
+            <Route path="/avaliacoes" element={<Reviews />} />
+            <Route path="/comunidade" element={<Community />} />
+            <Route path="/perfil" element={<Profile />} />
+            <Route path="/categorias/:category" element={<Category />} />
+            <Route
+              path="/configuracoes"
+              element={
+                <SimpleRoute
+                  title="Configurações"
+                  description="Ajuste suas preferências."
+                />
+              }
             />
-          }
-        />
-        <Route
-          path="/suporte"
-          element={
-            <SimpleRoute
-              title="Suporte"
-              description="Encontre ajuda para usar o Checkpoint."
+            <Route
+              path="/suporte"
+              element={
+                <SimpleRoute
+                  title="Suporte"
+                  description="Encontre ajuda para usar o Checkpoint."
+                />
+              }
             />
-          }
-        />
-        <Route path="/fazer-avaliacao" element={<WriteReview />} />
-        <Route path="/editar-perfil" element={<EditProfile />} />
-        <Route path="/rascunhos" element={<Drafts />} />
-      </Routes>
-    </Layout>
+            <Route path="/fazer-avaliacao" element={<WriteReview />} />
+            <Route path="/editar-perfil" element={<EditProfile />} />
+            <Route path="/rascunhos" element={<Drafts />} />
+          </Routes>
+        </Layout>
+      </WishlistProvider>
+    </ToastProvider>
   );
 }

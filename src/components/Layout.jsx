@@ -3,12 +3,12 @@ import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
+import { ToastViewport } from "./Toast";
 
 export default function Layout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { pathname } = useLocation();
   const isHome = pathname === "/";
-  // No hi-fi estas duas páginas não têm barra lateral nem botão de menu.
   const isBare = pathname === "/configuracoes" || pathname === "/suporte";
   const toggleSidebar = () => setSidebarOpen((open) => !open);
   return (
@@ -34,6 +34,7 @@ export default function Layout({ children }) {
         </main>
       </div>
       <MobileNav />
+      <ToastViewport />
     </>
   );
 }

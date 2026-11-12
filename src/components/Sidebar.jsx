@@ -17,7 +17,6 @@ const categories = [
   ["/categorias/estrategia", "military_tech", "Estratégia"],
 ];
 
-// Rotas que, no hi-fi, mantêm outro item do menu destacado.
 const aliases = {
   "/avaliacoes": ["/fazer-avaliacao", "/rascunhos"],
   "/perfil": ["/editar-perfil"],
