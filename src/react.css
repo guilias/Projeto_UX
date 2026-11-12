@@ -1,3 +1,12 @@
+:root {
+  --text-muted: #78849d;
+  --accent-text: #e64c80;
+}
+
+.link-more {
+  color: var(--accent-text);
+}
+
 .react-page {
   min-width: 0;
 }
@@ -312,6 +321,12 @@
   font-size: 1.05rem;
 }
 
+.discussion-info h3 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 .discussion-tags {
   display: flex;
   gap: 6px;
@@ -472,7 +487,7 @@
 }
 
 .review-game-header span {
-  color: var(--accent-primary);
+  color: var(--accent-text);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -666,7 +681,7 @@
 
 .add-tag {
   padding: 6px 14px;
-  color: var(--accent-primary);
+  color: var(--accent-text);
   background: transparent;
   border: 1px dashed var(--accent-primary);
   border-radius: 20px;
@@ -1010,7 +1025,7 @@
   padding: 16px;
 }
 
-.draft-item-body h3 {
+.draft-item-body h2 {
   overflow: hidden;
   font-size: 0.95rem;
   font-weight: 700;
@@ -1255,8 +1270,8 @@
     display: block;
   }
 
-  .explore-bottom > aside,
-  .profile-bottom > aside {
+  .explore-bottom > .explore-genres,
+  .profile-bottom > .right-panel {
     display: none;
   }
 

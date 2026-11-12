@@ -23,7 +23,7 @@ export default function Header({ onMenuClick, menuOpen, showMenu = true }) {
         </button>
       )}
       <Link to="/" className="brand">
-        <img src="/assets/checkpoint_icon.png" alt="Checkpoint" />
+        <img src="/assets/checkpoint_icon.png" alt="" />
         <span>checkpoint</span>
       </Link>
       <label className="search-bar" htmlFor="global-search">
@@ -36,12 +36,18 @@ export default function Header({ onMenuClick, menuOpen, showMenu = true }) {
         />
       </label>
       <div className="topbar-actions">
-        <button className="icon-btn" type="button" aria-label="Notificações">
+        <button
+          className="icon-btn"
+          type="button"
+          title="Notificações"
+          aria-label="Notificações"
+        >
           <Icon>notifications</Icon>
         </button>
         <Link
           to="/perfil"
           className="user-avatar-sm"
+          title="Meu Perfil"
           aria-label="Abrir meu perfil"
         >
           <Icon>person</Icon>

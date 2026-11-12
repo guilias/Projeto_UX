@@ -115,7 +115,11 @@ function Home() {
             <h2 id="new-reviews-title" className="section-title">
               Novas avaliações
             </h2>
-            <Link to="/avaliacoes" className="link-more">
+            <Link
+              to="/avaliacoes"
+              className="link-more"
+              aria-label="Ver todas as avaliações"
+            >
               Ver todas →
             </Link>
           </div>
@@ -130,7 +134,11 @@ function Home() {
             <h2 id="featured-discussions-title" className="section-title">
               Discussões em destaque
             </h2>
-            <Link to="/comunidade" className="link-more">
+            <Link
+              to="/comunidade"
+              className="link-more"
+              aria-label="Ver todas as discussões"
+            >
               Ver todas →
             </Link>
           </div>
@@ -175,7 +183,7 @@ function Home() {
                     {initial}
                   </div>
                   <div className="discussion-info">
-                    <h4>{title}</h4>
+                    <h3>{title}</h3>
                     <div className="user-meta">
                       <span className={`tag-badge ${color}`}>{tag}</span>
                       <span>
@@ -195,11 +203,15 @@ function Home() {
           </div>
         </section>
       </div>
-      <aside className="right-panel" aria-label="Informações da comunidade">
+      <div className="right-panel">
         <div className="widget-card">
           <div className="section-header">
             <h2 className="section-title">Jogos mais bem avaliados</h2>
-            <Link to="/explorar" className="link-more">
+            <Link
+              to="/explorar"
+              className="link-more"
+              aria-label="Ver todos os jogos mais bem avaliados"
+            >
               Ver todos →
             </Link>
           </div>
@@ -282,7 +294,7 @@ function Home() {
             ))}
           </div>
         </div>
-      </aside>
+      </div>
     </>
   );
 }
@@ -442,7 +454,7 @@ function Explore() {
             ))}
           </div>
         </div>
-        <aside className="widget-card" aria-labelledby="genres-title">
+        <div className="widget-card explore-genres">
           <h3 id="genres-title" className="section-title">
             Gêneros Populares
           </h3>
@@ -472,7 +484,7 @@ function Explore() {
               ),
             )}
           </div>
-        </aside>
+        </div>
       </section>
     </PrototypePage>
   );
@@ -586,6 +598,7 @@ function Reviews() {
                     <h2 className="review-game-title">{title}</h2>
                     <div
                       className="star-row"
+                      role="img"
                       aria-label={`Nota ${rating} de 5`}
                     >
                       {[0, 1, 2, 3, 4].map((star) => (
@@ -624,7 +637,7 @@ function Reviews() {
           )}
         </div>
       </div>
-      <aside className="right-panel reviews-sidebar">
+      <div className="right-panel reviews-sidebar">
         <div className="widget-card">
           <h2 className="section-title">Jogos Mais Avaliados</h2>
           <div className="ranked-list">
@@ -663,14 +676,18 @@ function Reviews() {
                   <div className="rank-title">{user}</div>
                   <span>{count}</span>
                 </div>
-                <button className="btn-follow" type="button">
+                <button
+                  className="btn-follow"
+                  type="button"
+                  aria-label={`Seguir ${user}`}
+                >
                   + Seguir
                 </button>
               </div>
             ))}
           </div>
         </div>
-      </aside>
+      </div>
     </PrototypePage>
   );
 }
@@ -794,7 +811,7 @@ function Community() {
           </div>
         </section>
       </div>
-      <aside className="right-panel community-sidebar">
+      <div className="right-panel community-sidebar">
         <div className="widget-card">
           <h2 className="section-title">Usuários Mais Ativos esta semana</h2>
           <div className="ranked-list">
@@ -811,7 +828,11 @@ function Community() {
                   <div className="rank-title">{user}</div>
                   <span>{count}</span>
                 </div>
-                <button className="btn-follow" type="button">
+                <button
+                  className="btn-follow"
+                  type="button"
+                  aria-label={`Seguir ${user}`}
+                >
                   + Seguir
                 </button>
               </div>
@@ -844,18 +865,18 @@ function Community() {
             ))}
           </div>
         </div>
-      </aside>
+      </div>
     </PrototypePage>
   );
 }
 
 function Profile() {
   const favorites = [
-    ["zelda_totk_capa.png", "Zelda Tears of the Kingdom"],
-    ["alan_wake2.png", "Alan Wake 2"],
-    ["bg3.png", "Baldur's Gate 3"],
-    ["cyberpunk.png", "Cyberpunk 2077"],
-    ["outer_wilds.png", "Outer Wilds"],
+    ["zelda_totk_capa.png", "Zelda Tears of the Kingdom", 5],
+    ["alan_wake2.png", "Alan Wake 2", 5],
+    ["bg3.png", "Baldur's Gate 3", 5],
+    ["cyberpunk.png", "Cyberpunk 2077", 4],
+    ["outer_wilds.png", "Outer Wilds", 5],
   ];
   const activities = [
     [
@@ -915,17 +936,21 @@ function Profile() {
           <h2 className="section-title">Jogos Favoritos</h2>
         </div>
         <div className="poster-grid-5">
-          {favorites.map(([image, title], index) => (
+          {favorites.map(([image, title, rating]) => (
             <article className="poster-card" key={title}>
               <div className="poster-img-wrap">
                 <img src={`/assets/${image}`} alt={title} />
                 <WishlistButton game={title} image={image} />
               </div>
               <div className="poster-meta">
-                <div className="star-row">
+                <div
+                  className="star-row"
+                  role="img"
+                  aria-label={`Nota ${rating} de 5`}
+                >
                   {[0, 1, 2, 3, 4].map((star) => (
                     <Icon
-                      className={`icon-star ${star === 4 && index === 3 ? "star-dim" : ""}`}
+                      className={`icon-star ${star < rating ? "" : "star-dim"}`}
                       key={star}
                     >
                       star
@@ -958,6 +983,7 @@ function Profile() {
                     <h3 className="review-game-title">{title}</h3>
                     <div
                       className="star-row"
+                      role="img"
                       aria-label={`Nota ${rating} de 5`}
                     >
                       {[0, 1, 2, 3, 4].map((star) => (
@@ -984,7 +1010,7 @@ function Profile() {
             ))}
           </div>
         </div>
-        <aside className="right-panel">
+        <div className="right-panel">
           <div className="widget-card">
             <h3 className="section-title">Estatísticas de avaliação</h3>
             <div className="rating-bars">
@@ -1008,7 +1034,7 @@ function Profile() {
               <img src="/assets/re4.png" alt="Resident Evil 4" />
             </div>
           </div>
-        </aside>
+        </div>
       </section>
     </PrototypePage>
   );
@@ -1116,7 +1142,7 @@ function Category() {
   const data = categories[category] || categories.acao;
   return (
     <PrototypePage title="" description="">
-      <section className="category-header" aria-labelledby="category-title">
+      <section className="category-header">
         <div className="category-heading">
           <div className="category-icon">
             <Icon>{data.icon}</Icon>
@@ -1204,7 +1230,7 @@ function Drafts() {
               <span className="draft-item-badge">Rascunho</span>
             </div>
             <div className="draft-item-body">
-              <h3>The Last of Us Part I</h3>
+              <h2>The Last of Us Part I</h2>
               <Link to="/fazer-avaliacao" className="draft-item-button">
                 Continuar Editando
               </Link>
@@ -1375,6 +1401,16 @@ function WriteReview() {
     navigate("/avaliacoes", { replace: true });
     showToast("Avaliação publicada com sucesso!");
   };
+  const handleRatingKey = (event) => {
+    const passo = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 }[
+      event.key
+    ];
+    if (!passo) return;
+    event.preventDefault();
+    const nova = Math.min(5, Math.max(1, rating + passo));
+    setRating(nova);
+    event.currentTarget.querySelectorAll("button")[nova - 1].focus();
+  };
   return (
     <PrototypePage title="" description="">
       <section className="write-review-page">
@@ -1390,7 +1426,11 @@ function WriteReview() {
           <form className="review-form-card" onSubmit={handleSubmit}>
             <div className="review-rating">
               <span>Sua Avaliação</span>
-              <div role="radiogroup" aria-label="Escolha uma nota de 1 a 5">
+              <div
+                role="radiogroup"
+                aria-label="Escolha uma nota de 1 a 5"
+                onKeyDown={handleRatingKey}
+              >
                 {[1, 2, 3, 4, 5].map((value) => (
                   <button
                     className={value <= rating ? "" : "star-dim"}
@@ -1398,6 +1438,7 @@ function WriteReview() {
                     role="radio"
                     aria-checked={rating === value}
                     aria-label={`${value} estrelas`}
+                    tabIndex={value === rating ? 0 : -1}
                     key={value}
                     onClick={() => setRating(value)}
                   >
@@ -1506,7 +1547,7 @@ function WriteReview() {
               </button>
             </div>
           </form>
-          <aside className="review-tips">
+          <div className="review-tips">
             <h2>💡 Dicas para uma boa avaliação</h2>
             {[
               ["Seja sincero", "Compartilhe sua experiência genuína."],
@@ -1526,7 +1567,7 @@ function WriteReview() {
                 </span>
               </p>
             ))}
-          </aside>
+          </div>
         </div>
       </section>
     </PrototypePage>

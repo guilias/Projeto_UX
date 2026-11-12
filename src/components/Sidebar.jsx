@@ -47,7 +47,7 @@ export default function Sidebar({ open, onClose }) {
       id="sidebar"
       aria-label="Navegação principal"
     >
-      <nav className="nav-group sidebar-primary-nav">
+      <nav className="nav-group sidebar-primary-nav" aria-label="Seções">
         {links.map(([to, icon, label]) => (
           <NavigationLink key={to} to={to} icon={icon} onClick={onClose}>
             {label}
@@ -55,7 +55,7 @@ export default function Sidebar({ open, onClose }) {
         ))}
       </nav>
       <div className="sidebar-divider" />
-      <nav className="nav-group">
+      <nav className="nav-group" aria-label="Categorias">
         <span className="nav-section-title">Categorias</span>
         {categories.map(([to, icon, label]) => (
           <NavigationLink key={to} to={to} icon={icon} onClick={onClose}>
@@ -64,7 +64,7 @@ export default function Sidebar({ open, onClose }) {
         ))}
       </nav>
       <div className="sidebar-divider" />
-      <nav className="nav-group">
+      <nav className="nav-group" aria-label="Sistema">
         <span className="nav-section-title">Sistema</span>
         <NavigationLink to="/configuracoes" icon="settings" onClick={onClose}>
           Configurações
