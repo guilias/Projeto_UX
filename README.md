@@ -98,7 +98,7 @@ Dessa forma, a plataforma busca acompanhar diferentes momentos da experiência d
 
 - [Prototipação em Papel](docs/09_Prototipacao_Papel.md)
 - [Prototipação de Média Fidelidade (FIGMA)](#)
-- [Prototipação de Alta Fidelidade (JS)](#)
+- [Prototipação de Alta Fidelidade (JS)](docs/10_Prototipacao_JS.md)
 
 ### Avaliação
 
