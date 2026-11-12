@@ -1,6 +1,6 @@
 # Projeto de Experiência de Usuário
 
-> Documentação e projeto em desenvolvimento, utilizando como base o repositório indicado pelo orientador da disciplina -  https://github.com/FagnerPimentel-Academic/template-ux/tree/main.
+> Documentação e projeto desenvolvidos utilizando como base o repositório indicado pelo orientador da disciplina -  https://github.com/FagnerPimentel-Academic/template-ux/tree/main.
 
 Projeto apresentado ao Centro Universitário [FEI](https://portal.fei.edu.br/), como parte dos requisitos necessários para aprovação na disciplina de Experiência do Usuário (CCP310) do curso de Ciencia da Computação, orientado pelo Prof. Dr. [Fagner de Assis Moura Pimentel](http://lattes.cnpq.br/6747210702910392).
 
