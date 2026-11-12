@@ -1,1 +1,5 @@
-Protótipos disponíveis [aqui](./prototipo_alta_fidelidade_v1).
+# Prototipação de Alta Fidelidade
+
+**Acesse em:** https://guilias.github.io/Projeto_UX/index.html
+
+- Acesso ao código: https://github.com/guilias/Projeto_UX/tree/high-fidelity-responsive
