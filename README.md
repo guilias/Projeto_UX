@@ -1,4 +1,4 @@
-# Projeto de Experiência de Usuário (WIP)
+# Projeto de Experiência de Usuário
 
 > Documentação e projeto em desenvolvimento, utilizando como base o repositório indicado pelo orientador da disciplina -  https://github.com/FagnerPimentel-Academic/template-ux/tree/main.
 
