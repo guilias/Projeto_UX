@@ -19,8 +19,8 @@
   fill: currentColor;
 }
 
-.icon-svg.icon-star[data-icon="star_outline"] {
-  fill: none;
+.icon-svg.icon-star.star-dim {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .mobile-nav a .icon-svg {
@@ -94,6 +94,14 @@
 .main-wrapper {
   min-width: 0;
   grid-template-columns: minmax(0, 1fr) 310px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 68px;
+  align-self: start;
+  height: calc(100vh - 68px);
+  overflow-y: auto;
 }
 
 .menu-bars {

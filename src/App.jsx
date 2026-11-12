@@ -589,8 +589,11 @@ function Reviews() {
                       aria-label={`Nota ${rating} de 5`}
                     >
                       {[0, 1, 2, 3, 4].map((star) => (
-                        <Icon className="icon-star" key={star}>
-                          {star < rating ? "star" : "star_outline"}
+                        <Icon
+                          className={`icon-star ${star < rating ? "" : "star-dim"}`}
+                          key={star}
+                        >
+                          star
                         </Icon>
                       ))}
                     </div>
@@ -861,6 +864,7 @@ function Profile() {
       "Simplesmente uma obra-prima. A história, os personagens e o mundo aberto são incríveis. É um jogo que fica com você por muito tempo depois que termina.",
       "24",
       "132",
+      5,
     ],
     [
       "hades.png",
@@ -868,6 +872,7 @@ function Profile() {
       "A trilha sonora e a jogabilidade são impecáveis. A narrativa se integra perfeitamente à mecânica de morrer e tentar de novo. Um dos melhores roguelikes que já joguei.",
       "45",
       "8",
+      4,
     ],
   ];
   return (
@@ -919,8 +924,11 @@ function Profile() {
               <div className="poster-meta">
                 <div className="star-row">
                   {[0, 1, 2, 3, 4].map((star) => (
-                    <Icon className="icon-star" key={star}>
-                      {star === 4 && index === 3 ? "star_outline" : "star"}
+                    <Icon
+                      className={`icon-star ${star === 4 && index === 3 ? "star-dim" : ""}`}
+                      key={star}
+                    >
+                      star
                     </Icon>
                   ))}
                 </div>
@@ -938,7 +946,7 @@ function Profile() {
             </h2>
           </div>
           <div className="review-feed">
-            {activities.map(([image, title, text, likes, comments]) => (
+            {activities.map(([image, title, text, likes, comments, rating]) => (
               <article className="review-card-horizontal" key={title}>
                 <img
                   className="review-poster-sm"
@@ -948,9 +956,15 @@ function Profile() {
                 <div className="review-h-body">
                   <div>
                     <h3 className="review-game-title">{title}</h3>
-                    <div className="star-row">
+                    <div
+                      className="star-row"
+                      aria-label={`Nota ${rating} de 5`}
+                    >
                       {[0, 1, 2, 3, 4].map((star) => (
-                        <Icon className="icon-star" key={star}>
+                        <Icon
+                          className={`icon-star ${star < rating ? "" : "star-dim"}`}
+                          key={star}
+                        >
                           star
                         </Icon>
                       ))}
@@ -1317,21 +1331,16 @@ function EditProfile() {
             <input
               id="display-name"
               type="text"
-              defaultValue="GamerMaster"
+              defaultValue="Luis Inacio"
               required
             />
             <label htmlFor="username">Nome de Usuário (@)</label>
-            <input
-              id="username"
-              type="text"
-              defaultValue="@gamermaster"
-              required
-            />
+            <input id="username" type="text" defaultValue="@lula13" required />
             <label htmlFor="bio">Biografia</label>
             <textarea
               id="bio"
               rows="4"
-              defaultValue="Apaixonado por RPGs de mundo aberto e jogos de ação épicos. Sempre em busca da platina!"
+              defaultValue="Apaixonado por RPGs, mundos abertos e narrativas marcantes."
             />
             <label htmlFor="platform">Plataforma Principal</label>
             <select id="platform" defaultValue="ps5">

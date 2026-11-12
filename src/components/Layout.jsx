@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
@@ -11,6 +11,11 @@ export default function Layout({ children }) {
   const isHome = pathname === "/";
   const isBare = pathname === "/configuracoes" || pathname === "/suporte";
   const toggleSidebar = () => setSidebarOpen((open) => !open);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <a className="skip-link" href="#main-content">
