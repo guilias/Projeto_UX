@@ -107,3 +107,5 @@ Dessa forma, a plataforma busca acompanhar diferentes momentos da experiência d
 - [Planejamento da Avaliação](#)
 - [Avaliação de Usabilidade através de Inspeção Heurística](#)
 - [Teste de Usabilidade com Observação do Usuário](#)
+
+> Slides: https://docs.google.com/presentation/d/19oPMNn9bvOsK8DG14mbEy3lwg-QlHpQFNcZBNy0TzPM/edit?slide=id.p1#slide=id.p1
